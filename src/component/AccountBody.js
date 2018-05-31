@@ -25,7 +25,7 @@ export default class AccountBody extends Component {
                     data={this.state.feature}
                     renderItem={({ item }) =>
                         <View style={{ backgroundColor: Color.medDongker, marginTop: item.marginTop, marginBottom: item.marginBottom,paddingVertical: 13, justifyContent: 'center' }} >
-                            <View style={{ width: '75%', alignSelf: 'center' }} onTouchStart={() => this.props.navigation.navigate('Login')} >
+                            <View style={{ width: '75%', alignSelf: 'center' }} onTouchEnd={() => this.props.navigation.navigate('Login')} >
                                 <Text style={{ color: 'white', textAlign: 'left', fontSize: 13 }} >{item.list}</Text>
                             </View>
                         </View>

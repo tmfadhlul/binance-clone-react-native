@@ -7,11 +7,11 @@ import { Color } from '../config/style'
 export default class ProfileHead extends Component {
   render() {
     return (
-      <View style={{ flexDirection: 'row', backgroundColor: Color.medDongker, width: '100%', paddingVertical: '-10%' }}>
-        <View style={{height:35, width: 35,  margin: '4%'}} >
-          <Image style={{ width: 30, height: 30 }} source={require('../assets/img/profile.png')} />
+      <View style={{ flexDirection: 'row', backgroundColor: Color.medDongker, width: '100%', paddingVertical: '3%', justifyContent:'flex-start' }}>
+        <View style={{height:35, width: 35,  marginHorizontal: '4%', alignSelf: 'center'}} >
+          <Image style={{ width: 30, height: 30 }} source={require('../assets/img/Account/profile.png')} />
         </View>
-        <Text style={{ positon: 'absolute', marginVertical: '5%', color: Color.orange, height: '100%' }} >tmfadhlul@gmail.com</Text>
+        <Text style={{ color: Color.orange, alignSelf:'center'}} >tmfadhlul@gmail.com</Text>
       </View>
     )
   }
