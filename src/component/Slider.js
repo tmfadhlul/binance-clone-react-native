@@ -20,11 +20,7 @@ export default class Slider extends Component {
     render() {
         return (
             < View style={{ width: '100%', height: '100%'}} >
-                {this.state.img.map((element, index) => {
-                    <View style={{ width: '100%', height: '100%'}} >
-                            <Image source={require('../assets/img/home-1.png')} />
-                    </View>
-                })}
+                <Swiper></Swiper>
             </View >
         )
     }
