@@ -5,7 +5,7 @@ import { Button } from 'native-base'
 export default class LoginScreen extends Component {
     render() {
         return (
-            <View>
+            <View style={{backgroundColor: Color.darkDongker, height: '100%', width: '100%'}} >  
             </View>
         )
     }

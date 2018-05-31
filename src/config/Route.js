@@ -8,13 +8,13 @@ import TradesScreen from '../screen/Trades'
 import MarketsScreen from '../screen/Markets'
 import FundsScreen from '../screen/Funds'
 import AccountScreen from '../screen/Account'
-import { Title } from './style.js'
+import { Title, Color } from './style.js'
 
 export const HomeStack = createStackNavigator(
     {
         Home: {
             screen: HomeScreen,
-        },
+        }
     },
     {
         headerMode: 'none'
@@ -28,6 +28,11 @@ export const MarketsStack = createStackNavigator(
             navigationOptions: 
             {
                 headerTitle: <Text style={Title.layout} >Markets</Text>,
+                headerStyle: {
+                    backgroundColor: Color.dongker,
+                    elevation: 0
+
+                }
             }
         }
     }
@@ -40,9 +45,12 @@ export const TradeStack = createStackNavigator(
             navigationOptions: 
             {
                 headerTitle: <Text style={Title.layout} >Trades</Text>,
+                headerStyle: {
+                    backgroundColor: Color.dongker
+                }
             }
         }
-    }
+    },
 )
 
 export const FundsStack = createStackNavigator(
@@ -52,6 +60,9 @@ export const FundsStack = createStackNavigator(
             navigationOptions: 
             {
                 headerTitle: <Text style={Title.layout} >Funds</Text>,
+                headerStyle: {
+                    backgroundColor: Color.dongker
+                }
             }
         }
     }
@@ -64,6 +75,10 @@ export const AccountStack = createStackNavigator(
             navigationOptions: 
             {
                 headerTitle: <Text style={Title.layout} >Account</Text>,
+                headerStyle: {
+                    backgroundColor: Color.dongker,
+                    elevation: 0
+                }
             }
         }
     }
@@ -75,46 +90,47 @@ export const BottomStack = createBottomTabNavigator(
             screen: HomeStack,
             navigationOptions: 
             {
-                tabBarIcon: ({ tintColor }) => (<Icon name='ios-home' style={{color: tintColor}}/> )
+                tabBarIcon: ({ tintColor }) => (<Icon name='home' style={{color: tintColor}}/> )
             }
         },
         Market: {
             screen: MarketsStack,
             navigationOptions: 
             {
-                tabBarIcon: ({ tintColor }) => (<Icon name='ios-home' style={{color: tintColor}}/> )
+                tabBarIcon: ({ tintColor }) => (<Icon name='stats' style={{color: tintColor}}/> )
             }
         },
         Trades: {
             screen: TradeStack,
             navigationOptions: 
             {
-                tabBarIcon: ({ tintColor }) => (<Icon name='ios-home' style={{color: tintColor}}/> )
+                tabBarIcon: ({ tintColor }) => (<Icon name='ios-aperture' style={{color: tintColor}}/> )
             }
         },
         Funds: {
             screen: FundsStack,
             navigationOptions: 
             {
-                tabBarIcon: ({ tintColor }) => (<Icon name='ios-home' style={{color: tintColor}}/> )
+                tabBarIcon: ({ tintColor }) => (<Icon name='archive' style={{color: tintColor}}/> )
             }
         },
         Account: {
             screen: AccountStack,
             navigationOptions: 
             {
-                tabBarIcon: ({ tintColor }) => (<Icon name='ios-home' style={{color: tintColor}}/> )
+                tabBarIcon: ({ tintColor }) => (<Icon name='people' style={{color: tintColor}}/> )
             }
         }
     },
     {
         tabBarOptions: {
-            activeTintColor: 'white',
-            inactiveTintColor: 'grey',
+            activeTintColor: Color.orange,
+            inactiveTintColor: Color.lightGrey,
             showLabel: true,
             style: {
-                backgroundColor: 'black',
-                height: 57,
+                backgroundColor: Color.dongker,
+                height: 45,
+                paddingVertical: 5
             }
         },
 }
@@ -124,26 +140,13 @@ export const RootStack = createStackNavigator(
     {
         Main: BottomStack,
         Login: {
-            screen: AccountStack
+            screen: MarketsStack
         }
     },
     {
             headerMode: 'none'
     }
 )
-
-const styles = StyleSheet.create({
-    headerContainer: {
-        fontSize: 15 ,
-        zIndex: 0 ,
-        fontWeight: 'bold' ,
-        width: '100%', 
-        position: 'relative', 
-        textAlign: 'center',
-        backgroundColor: 'transparent',
-        color: 'black'
-    }
-})
 
 
 
