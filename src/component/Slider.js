@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
-import { Swiper } from 'react-native-swiper';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import Swiper from 'react-native-swiper';
 
 export default class Slider extends Component {
 
@@ -19,9 +19,13 @@ export default class Slider extends Component {
 
     render() {
         return (
-            < View style={{ width: '100%', height: '100%'}} >
-                <Swiper></Swiper>
-            </View >
+            <Swiper
+                showsPagination={false}
+                autoPlay={true}>
+                {this.state.img.map((element, index) =>
+                    <Image style={{ width: '100%', height: '90%', overflow: 'visible' }} source={element} />
+                )}
+            </Swiper>
         )
     }
 };

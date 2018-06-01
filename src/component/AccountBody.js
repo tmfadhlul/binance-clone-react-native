@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { FlatList, Text, Image } from "react-native";
+import { FlatList, Text, Image } from 'react-native';
 import { View } from 'native-base';
 
-import { Color } from "../config/style";
+import { Color } from '../config/style';
+import { user } from '../config/user'
 
-const user = {
-    id: 35129339,
-    auth: true,
-}
 
 export default class AccountBody extends Component {
+
+    handleButton(screen){
+        this.props.navigation.navigate(screen)
+      }
 
     state = {
         feature: [
@@ -75,7 +76,7 @@ export default class AccountBody extends Component {
                     renderItem={({ item }) =>
                         <View style={{ backgroundColor: Color.medDongker, marginTop: item.marginTop, marginBottom: item.marginBottom,paddingVertical: 13, justifyContent: 'center' }} >
                             <Image style={{marginLeft: 13,position: 'absolute',alignSelf: 'flex-start'}} source={item.img} />                            
-                            <View style={{ width: '75%', alignSelf: 'center' }} onTouchEnd={() => this.props.navigation.navigate(item.action)} >
+                            <View style={{ width: '75%', alignSelf: 'center' }} onTouchEnd={() => this.handleButton(item.action)} >
                                 <Text style={{position: 'relative', color: 'white', textAlign: 'left', fontSize: 13 }} >{item.list}</Text>
                             </View>
                             <Image style={{right: 10, position: 'absolute',alignSelf: 'flex-end'}} source={item.btn} />
