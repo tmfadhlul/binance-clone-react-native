@@ -3,7 +3,7 @@ export const Title = {
         zIndex: 0 ,
         fontWeight: '100' ,
         width: '100%', 
-        position: 'relative', 
+        position: 'absolute', 
         textAlign: 'center',
         backgroundColor: 'transparent',
         color: 'white',

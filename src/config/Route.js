@@ -8,7 +8,8 @@ import {
     TradesScreen,
     MarketsScreen,
     FundsScreen,
-    AccountScreen
+    AccountScreen,
+    SecurityScreen
 } from '../screen/index'
 import { Title, Color } from './style.js'
 
@@ -82,6 +83,23 @@ export const AccountStack = createStackNavigator(
                         elevation: 0
                     }
                 }
+        },
+    }
+)
+
+export const SecureStacks = createStackNavigator(
+    {
+        Security: {
+            screen: SecurityScreen,
+            navigationOptions:
+                {
+                    headerLeft: <Icon name="arrow-back" style={{color: 'white', marginHorizontal: 10,}} />,
+                    headerTitle: <Text style={Title.layout} >Security</Text>,
+                    headerStyle: {
+                        backgroundColor: Color.dongker,
+                        elevation: 0
+                    }
+                }
         }
     }
 )
@@ -146,9 +164,7 @@ export const BottomStack = createBottomTabNavigator(
 export const RootStack = createStackNavigator(
     {
         Main: BottomStack,
-        Login: {
-            screen: MarketsStack
-        }
+        Secure: SecureStacks
     },
     {
         headerMode: 'none'

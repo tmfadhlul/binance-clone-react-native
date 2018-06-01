@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, Dimension } from 'react-native';
 import { Button, Content } from 'native-base';
 import { Swiper } from 'react-native-swiper';
 
@@ -9,10 +9,12 @@ import SliderCurrency from '../component/SliderCurrency'
 import SliderAnnounce from '../component/SliderAnnounce'
 import ActionHome from "../component/ActionHome";
 
+
 export default class Home extends Component {
     render() {
         return (
-            <View style={{ backgroundColor: Color.darkDongker, flex: 1 }}  >
+            <ScrollView>
+                <View style={{height: 665, backgroundColor: Color.darkDongker, flex: 1 }}  >
                     <View style={{ flex: 1.3, backgroundColor: Color.medDongker }} >
                         <Slider />
                         <SliderCurrency />
@@ -25,7 +27,8 @@ export default class Home extends Component {
                         <View>
                         </View>
                     </View>
-            </View>
+                </View>
+            </ScrollView>
         )
     }
 };

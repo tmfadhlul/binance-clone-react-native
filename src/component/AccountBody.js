@@ -19,7 +19,7 @@ export default class AccountBody extends Component {
                 marginTop: 4, 
                 marginBottom: 4, 
                 img: require('../assets/img/Account/DB.png'),
-                action: 'Login'
+                action: 'Secure'
             },
             { 
                 list: 'Referral Program', 
@@ -29,7 +29,7 @@ export default class AccountBody extends Component {
                 btn: require('../assets/img/Account/gd.png'),
                 txt: `ID : ${user.id}`,
                 style: {color: Color.lightGrey, right: 22,},
-                action: 'Login'                 
+                action: 'Secure'                 
             },
             { 
                 list: 'Identity Authentication', 
@@ -38,15 +38,15 @@ export default class AccountBody extends Component {
                 img: require('../assets/img/Account/is.png'), 
                 txt: user.auth === true ? 'Verified' : 'Unverified',
                 style: {color: 'white', right: 10,},
-                action: 'Login'                  
+                action: 'Secure'                  
             },
             { 
-                list: 'Security', 
+                list: 'Secure', 
                 marginTop: 4, 
                 marginBottom: 0, 
                 img: require('../assets/img/Account/security.png'),  
                 btn: require('../assets/img/Account/gd.png'),
-                action: 'Login'
+                action: 'Secure'
             }, 
             { 
                 list: 'Setting', 
@@ -54,7 +54,7 @@ export default class AccountBody extends Component {
                 marginBottom: 4, 
                 img: require('../assets/img/Account/iu.png'),  
                 btn: require('../assets/img/Account/gd.png'),
-                action: 'Login'
+                action: 'Secure'
             },
             { 
                 list: 'Support', 
@@ -62,7 +62,7 @@ export default class AccountBody extends Component {
                 marginBottom: 4, 
                 img: require('../assets/img/Account/support.png'),  
                 btn: require('../assets/img/Account/gd.png'),
-                action: 'Login'
+                action: 'Secure'
             },            
         ]
     }
