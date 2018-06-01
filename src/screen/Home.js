@@ -12,20 +12,24 @@ import ActionHome from "../component/ActionHome";
 export default class Home extends Component {
     render() {
         return (
-                <View style={{ backgroundColor: Color.darkDongker, flex: 1 }} >
-                    <View style={{ flex: 1.3, backgroundColor: Color.medDongker }} >
-                        <Slider />
-                        <SliderCurrency />
-                        <SliderAnnounce />
-                    </View>
-                    <View style={{ flex: 0.2, backgroundColor: Color.medDongker, marginVertical: '2%' }} >
-                        <ActionHome />
-                    </View>
-                    <View style={{ flex: 0.7 }} >
-                        <View>
+            // <View style={{flex: 1}}>
+            //     <ScrollView style={{flex: 1}} >
+                    <View style={{ backgroundColor: Color.darkDongker, flex: 1 }}  >
+                        <View style={{ flex: 1.3, backgroundColor: Color.medDongker }} >
+                            <Slider />
+                            <SliderCurrency />
+                            <SliderAnnounce />
                         </View>
-                    </View>
-                </View>
+                        <View style={{ flex: 0.2, backgroundColor: Color.medDongker, marginVertical: '2%' }} >
+                            <ActionHome />
+                        </View>
+                        <View style={{ flex: 0.7 }} >
+                            <View>
+                            </View>
+                        </View>
+                    {/* </View>
+                </ScrollView> */}
+            </View>
         )
     }
 };
