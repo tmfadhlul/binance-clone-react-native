@@ -5,16 +5,26 @@ import { Swiper } from 'react-native-swiper';
 
 import { Color } from '../config/style'
 import Slider from '../component/Slider'
-import SliderCurrencry from '../component/SliderCurrency'
+import SliderCurrency from '../component/SliderCurrency'
 import SliderAnnounce from '../component/SliderAnnounce'
+import HomeButton from "../component/ActionHome";
 
-export default class HomeScreen extends Component {
+export default class Home extends Component {
     render() {
         return (
             <View style={{ backgroundColor: Color.darkDongker, flex: 1 }} >
-                <Slider />
-                <SliderCurrencry />
-                <SliderAnnounce />
+                <View style={{ flex: 1.3, backgroundColor: Color.medDongker }} >
+                    <Slider />
+                    <SliderCurrency />
+                    <SliderAnnounce />
+                </View>
+                <View style={{ flex: 0.2, backgroundColor: Color.medDongker, marginVertical: '2%' }} >
+                    {/* <HomeButton /> */}
+                </View>
+                <View style={{ flex: 0.7 }} >
+                    <View>
+                    </View>
+                </View>
             </View>
         )
     }

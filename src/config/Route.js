@@ -3,11 +3,13 @@ import { Image, Text, StyleSheet } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Icon, Button } from 'native-base'
 
-import HomeScreen from '../screen/Home'
-import TradesScreen from '../screen/Trades'
-import MarketsScreen from '../screen/Markets'
-import FundsScreen from '../screen/Funds'
-import AccountScreen from '../screen/Account'
+import { 
+    HomeScreen, 
+    TradesScreen,
+    MarketsScreen,
+    FundsScreen,
+    AccountScreen
+} from '../screen/index'
 import { Title, Color } from './style.js'
 
 export const HomeStack = createStackNavigator(

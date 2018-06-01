@@ -8,12 +8,13 @@ export default class SliderAnnounce extends Component {
 
     render() {
         return (
-            <View style={{flex:1}} >
-                <Swiper horizontal={false} style={styles.wrapper} autoPlay={true} showsPagination={false}>
-                    <Text style={styles.text}>Hello Swiper</Text>
-                    <Text style={styles.text}>Beautiful</Text>
-                    <Text style={styles.text}>And simple</Text>
-                </Swiper>
+            <View style={styles.textWrapper} >
+            <Image style={{width: 10, height: 10}} source={require('../assets/img/Home/hc.png')} />
+            <Swiper horizontal={true} style={styles.wrapper} autoplay={true} showsPagination={false}>
+                <Text style={styles.text}>EOS Mainet Swap Update</Text>
+                <Text style={styles.text}>Binance list ioTex(IOTX)</Text>
+                <Text style={styles.text}>Binance add  XRP/BNB GVT on list</Text>
+            </Swiper>
             </View>
         )
     }
@@ -21,18 +22,22 @@ export default class SliderAnnounce extends Component {
 
 const styles = StyleSheet.create({
     wrapper: {
-        height: 10,
-        backgroundColor: Color.green,
-        justifyContent: 'flex-start',
     },
-    text: {
+    textWrapper: {
+        alignItems: 'center',
+        flex: 0.1,
+        flexDirection: 'row',
+        alignSelf: 'center',
         width: '90%',
         borderTopColor: Color.lightGrey,
-        borderTopWidth: 1,
-        alignSelf: 'center',
+        borderTopWidth: 0.5,
+    },
+    text: {
         padding: 5,
+        marginLeft: 5,
+        alignSelf: 'flex-start',
         color: '#fff',
-        fontSize: 12,
-        fontWeight: 'bold',
+        fontSize: 10,
+        fontWeight: '100',
     }
 })
