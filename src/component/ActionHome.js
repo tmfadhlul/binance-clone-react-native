@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Image } from 'native-base';
+import { View, Image } from 'react-native';
+import { Text } from 'native-base';
 
 export default class ActionHome extends Component {
 
@@ -14,9 +15,12 @@ export default class ActionHome extends Component {
 
     render() {
         return (
-            <View style={{flexDirection: 'row'}} >
-                {this.state.bar.map((element, index) => 
-                    <Image source={element.src}/>
+            <View style={{flex: 1, flexDirection: 'row',alignSelf: 'center',top: 5 ,justifyContent: 'space-between',width: '80%' , height: '100%'}} >
+                {this.state.bar.map((element, index) =>
+                <View style={{alignSelf: 'center'}}>
+                    <Image style={{height: 25,width:25,alignSelf: 'center', marginBottom: 3}} source={element.src}/>
+                    <Text style={{color: 'white', fontSize: 10}} > {element.title} </Text>
+                </View>
                 )}
             </View>
         )
